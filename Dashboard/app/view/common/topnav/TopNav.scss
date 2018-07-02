@@ -1,0 +1,9 @@
+@include toolbar-ui(
+    $ui: 'normal',
+    $background-color: $light-color
+);
+
+@include toolbar-ui(
+    $ui: 'transparent',
+    $background-color: transparent
+);

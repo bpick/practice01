@@ -1,0 +1,189 @@
+$detail-icon-size: dynamic(55px);
+$detail-icon-font-size: dynamic(27px);
+$detail-icon-background-color: dynamic(rgba(77, 161, 255, 0.1));
+$detail-meter-info-font-size: dynamic(11px);
+$detail-meter-background-color: dynamic(rgba(77, 161, 255, 0.2));
+$detail-switch-online-background-color: dynamic(rgba(124, 179, 66, 0.1));
+$detail-switch-offline-background-color: dynamic(rgba(198, 40, 40, 0.1));
+$detail-part-height: dynamic(95px);
+.x-detail {
+    .device-detail {
+        padding: 12px;
+        .data {
+            display: flex;
+            flex: 1;
+            .icon {
+                width: $detail-icon-size;
+                height: $detail-icon-size;
+                background-color:  $detail-icon-background-color;
+                color: $base-color;
+                font-size: $detail-icon-font-size;
+                margin: 0px 24px 0px 0px;
+            }
+            .info {
+                flex: 1;
+                .meter-info {
+                    color: $iot-treecell-icon-color;
+                    font-size: $detail-meter-info-font-size;
+                }
+            }
+
+            .ip {
+                color: $iot-treecell-icon-color;
+            }
+
+        }
+
+        .metadata {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+            color: $iot-treecell-icon-color;
+            .part{
+                flex: 1;
+                display: flex;
+                text-align: center;
+                height: $detail-part-height;
+            }
+            .part:first-child {
+                border-bottom: 1px solid $divider-color-light;
+            }
+            .status, .manufacturer, .hwversion, .swversion {
+                flex: 1;
+            }
+
+            .status {                
+                border-right: 1px solid $divider-color-light;
+                .state {
+                    flex-grow: 1;
+                    margin: 0.3rem;
+                    font-size: 10px;
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        margin-right: 3px;
+                    }
+                    &.online::before {
+                        border: 1px solid #7ED321;
+                        background-color: #B8E986;
+                    }
+                    &.offline::before {
+                        border: 1px solid #F5A623;
+                        background-color: #F4DBB1;
+                    }
+                }
+                .switch {
+                    display: inline-block;
+                    padding: 2px 8px;
+                    margin-top: 0.3rem;
+                    margin-bottom: 1rem;
+                    font-size: 10px;
+                    &.online {
+                        color: $confirm-color;
+                        background-color: $detail-switch-online-background-color;
+                    }
+                    &.offline {
+                        color: $alert-color;
+                        background-color: $detail-switch-offline-background-color;
+                    }
+                }
+            }
+            .manufacturer {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .icon {
+                    color: $base-color;
+                    width: $device-info-icon-size;
+                    height: $device-info-icon-size;
+                    font-size: $device-info-icon-size;
+                    flex: 1;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+            .swversion {
+                border-left: 1px solid $divider-color-light;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                div {
+                    flex: 1;
+                    text-align: center;
+                }
+            }
+            .hwversion {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                div {
+                    flex: 1;
+                    text-align: center;
+                }
+            }
+
+            .full-location {
+                h3 {
+                    color: $color;
+                }
+            }
+
+            .more-infor {
+                display: flex;
+                flex-direction: row;
+                margin: 0.5rem 0px;
+                div {
+                    flex: 1;
+                    .label {
+                        margin-right: 0.3rem;
+                        color: $color;
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+.meter {
+	position: relative;
+	background: $detail-meter-background-color;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+    box-shadow: inset 0 -1px 1px $alt-background-color;
+    &.action {
+        span {
+            background-color: $base-color;
+        }
+    }
+    &.decline {
+        span {
+            background-color: $alert-color;
+        }
+    }
+    &.confirm {
+        span {
+            background-color: $confirm-color;
+        }
+    }
+    &.warning {
+        span {
+            background-color: $accent-color;
+        }
+    }
+    span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: $base-color;
+        position: relative;
+        overflow: hidden;
+      }
+}

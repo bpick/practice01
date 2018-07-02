@@ -1,0 +1,19 @@
+@include button-ui(
+    $ui: 'normal',
+    $text-transform: $normal-text-transform,
+    $font-weight: $normal-font-weight,
+    $color: $normal-button-color,
+    $hovered-background-color: transparent
+);
+
+@include button-ui(
+    $ui: 'remove',
+    $color: $remove-button-color,
+    $font-weight: 200
+);
+
+@include button-ui(
+    $ui: 'toolbar',
+    $font-size: $toolbar-button-font-size,
+    $icon-size: $toolbar-button-font-size
+);

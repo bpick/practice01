@@ -1,0 +1,44 @@
+$device-item-padding: dynamic(12px);
+$device-item-border-radius: dynamic(6px);
+$device-item-icon-margin: dynamic(0px 24px 0px 12px);
+
+.x-listitem-device {
+    &.x-hovered {
+        
+        .device-item {
+            border: 1px solid $accent-color;
+            box-shadow: 0px 0px 6px 0px $accent-color;
+        }
+    }
+
+    &.x-selected {
+        .device-item {
+            background-color: $accent-color;
+            color: $light-color;
+            
+        }
+    }
+}
+.device {
+    display: flex;
+    vertical-align: middle;
+    padding: $device-item-padding;
+    border-radius: $device-item-border-radius;
+
+    &.device-selected {
+        background-color: $base-color;
+        color: $light-color;
+    }
+    &.device-item {
+        border: 1px solid $divider-color-light;
+    }
+
+    .x-font-icon {
+        font-size: $iot-treecell-icon-size;
+        margin: $device-item-icon-margin;
+    }
+    .x-body-el {
+        line-height: $iot-treecell-icon-size;
+        font-size: $font-size;
+    }
+}

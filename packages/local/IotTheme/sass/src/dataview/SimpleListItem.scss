@@ -1,0 +1,18 @@
+
+@include listitem-ui(
+    $ui: 'device',
+    $padding: $device-listitem-padding,
+    $hovered-background-color: transparent,
+    $selected-background-color: transparent,
+    $pressed-background-color: transparent,
+    $pinned-background-color: transparent,
+    $padding: 4px,
+    $color: $text-color,
+    $selected-color: $light-color,
+    $pressed-color: $light-color
+);
+.x-listitem-device {
+    .x-innerhtml {
+        width: 100%;
+    }
+}

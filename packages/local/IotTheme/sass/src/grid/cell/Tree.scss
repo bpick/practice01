@@ -1,0 +1,11 @@
+
+@include treecell-ui(
+    $ui: 'iot-treecell',
+    $padding: $iot-treecell-padding,
+    $icon-color: $iot-treecell-icon-color,
+    $icon-size: $iot-treecell-icon-size,
+    $icon-margin: $iot-treecell-icon-margin,
+    $expander-color: $text-color,
+    $background-color: transparent
+);
+

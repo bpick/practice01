@@ -1,0 +1,24 @@
+@include gridrow-ui(
+    $ui: 'iot-row',
+    $selected-background-color: $base-color,
+    $color: $text-color,
+    $hovered-color: $base-color,
+    $selected-color: $light-color
+);
+
+.x-gridrow-iot-row {
+    &.x-selected {
+        .x-treecell-iot-treecell  {
+            .x-icon-el {
+                color: $light-color !important;
+            }
+        }
+    }
+    &.x-hovered {
+        .x-treecell-iot-treecell  {
+            .x-icon-el {
+                color: $base-color;
+            }
+        }
+    }
+}

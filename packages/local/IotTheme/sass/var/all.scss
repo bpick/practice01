@@ -1,0 +1,7 @@
+$base-color: dynamic(#4DA1FF);
+$color: dynamic(#323C47);
+$text-color: dynamic(#979797);
+$divider-color: dynamic(#979797);
+$divider-color-light: transparentize($color: #979797, $amount: 0.9);
+$divider-color-dark: dynamic(#C5C5C5);
+$normal-font-weight: dynamic(normal);

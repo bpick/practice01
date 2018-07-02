@@ -1,0 +1,86 @@
+$device-info-width: dynamic(178px);
+$device-info-height: dynamic(128px);
+$device-info-margin: dynamic(12px);
+$device-info-padding: dynamic(8px);
+$device-info-metadata-height: dynamic(24px);
+$device-info-icon-size: dynamic(20px);
+$device-info-icon-location-size: dynamic(16px);
+
+.x-dataview-item {
+    width: $device-info-width;
+    height: $device-info-height;
+    border: 1px solid $divider-color-dark;
+    border-radius: 6px;
+    margin: $device-info-margin;
+    padding: $device-info-padding;
+    .device-info {
+        .metadata {
+            display: flex;
+            height: $device-info-metadata-height;
+            .state {
+                color: $text-color;
+                flex-grow: 1;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    margin-right: 3px;
+                }
+                &.on::before {
+                    border: 1px solid #7ED321;
+                    background-color: #B8E986;
+                }
+                &.off::before {
+                    border: 1px solid #F5A623;
+                    background-color: #F4DBB1;
+                }
+            }
+
+            .manufacturer {
+                color: $iot-treecell-icon-color;
+                width: $device-info-icon-size;
+                height: $device-info-icon-size;
+                font-size: $device-info-icon-size;
+            }
+            
+        }
+
+        .data {
+            text-align: center;
+            color: $iot-treecell-icon-color;
+            .name {
+                font-weight: normal;
+                color: $color;
+            }
+
+            .location {
+                width: $device-info-icon-location-size;
+                height: $device-info-icon-location-size;
+                font-size: $device-info-icon-location-size;
+            }
+        }
+    }
+    &.x-hovered, &.x-selected {
+        .device-info {
+            &.on {
+                .manufacturer {
+                    color: #7ED321 !important;
+                }
+            }
+            &.off {
+                .manufacturer {
+                    color: #F5A623 !important;
+                }
+            }
+        }
+    }
+    &.x-selected {
+        border-color: $base-color;
+        box-shadow: 0px 0px 6px 0px transparentize($color: $base-color, $amount: 0.5);
+        
+    }
+
+}
+

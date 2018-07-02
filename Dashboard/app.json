@@ -1,0 +1,133 @@
+{
+    "name": "Dashboard",
+    "namespace": "Dashboard",
+    "version": "1.0.0.1",
+    "framework": "ext",
+    "toolkit": "modern",
+    "theme": "IotTheme",
+    "requires": [
+        "font-awesome",
+        "Core"
+    ],
+    "indexHtmlPath": "index.html",
+    "classpath": [
+        "app"
+    ],
+    "overrides": [
+        "overrides"
+    ],
+    "fashion": {
+        "missingParameters": "error",
+        "inliner": {
+            "enable": false
+        }
+    },
+    "sass": {
+        "namespace": "Dashboard",
+        "generated": {
+            "var": "sass/save.scss",
+            "src": "sass/save"
+        },
+        "etc": [
+            "sass/etc/all.scss"
+        ],
+        "var": [
+            "sass/var/all.scss",
+            "sass/var"
+        ],
+        "src": [
+            "sass/src"
+        ]
+    },
+    "js": [
+        {
+            "path": "${framework.dir}/build/ext-modern-all-debug.js"
+        },
+        {
+            "path": "app.js",
+            "bundle": true
+        },
+        {
+            "path": "resources/scripts/prism/prism.js"
+        },
+        {
+            "path": "resources/scripts/barcoder.js"
+        }
+    ],
+    "css": [
+        {
+            "path": "${build.out.css.path}",
+            "bundle": true,
+            "exclude": ["fashion"]
+        },
+        {
+            "path": "resources/scripts/prism/prism.css"
+        }
+    ],
+     "loader": {
+         "cache": false,
+         "cacheParam": "_dc"
+     },
+    "production": {
+        "output": {
+            "appCache": {
+                "enable": true,
+                "path": "cache.appcache"
+            }
+        },
+        "loader": {
+            "cache": "${build.timestamp}"
+        },
+        "cache": {
+            "enable": true
+        },
+        "compressor": {
+            "type": "yui"
+        }
+    },
+    "testing": {
+    },
+    "development": {
+        "watch": {
+            "delay": 250
+        }
+    },
+    "bootstrap": {
+        "base": "${app.dir}",
+
+        "microloader": "bootstrap.js",
+        "css": "bootstrap.css"
+    },
+    "output": {
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "appCache": {
+            "enable": false
+        }
+    },
+    "cache": {
+        "enable": false,
+        "deltas": true
+    },
+    "appCache": {
+        "cache": [
+            "index.html"
+        ],
+        "network": [
+            "*"
+        ],
+        "fallback": []
+    },
+    "resources": [
+        {
+            "path": "resources",
+            "output": "shared"
+        }
+    ],
+    "archivePath": "archive",
+
+    "slicer": null,
+    "ignore": [
+        "(^|/)CVS(/?$|/.*?$)"
+    ],
+    "id": "17ee3e50-ffbd-4bc1-b6f3-5d12a7d0617e"
+}

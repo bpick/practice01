@@ -1,0 +1,20 @@
+@include textfield-ui(
+    $ui: 'normal',
+    $input-padding: $normal-textfield-input-padding,
+    $input-color: $color,
+    $focused-input-color: $base-color,
+    $placeholder-color: $text-color
+);
+
+
+@include textfield-ui(
+    $ui: 'normal-cbx',
+    $input-color: $text-color,
+    $input-underline-color: $divider-color,
+    $input-underline-width: 1px
+);
+
+@include trigger-ui(
+    $ui: 'normal',
+    $icon-color: $text-color
+);

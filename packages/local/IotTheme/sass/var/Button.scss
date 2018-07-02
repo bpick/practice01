@@ -1,0 +1,4 @@
+$normal-text-transform: dynamic(capitalize);
+$normal-button-color: dynamic(transparentize($color: #9B9B9B, $amount: 0.55));
+$remove-button-color: dynamic(#D0021B);
+$toolbar-button-font-size: dynamic(24px);

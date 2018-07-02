@@ -1,0 +1,4 @@
+.x-sidenav {
+    border-right: 1px solid $divider-color-dark;
+    @include transition(width, 250ms);
+}
